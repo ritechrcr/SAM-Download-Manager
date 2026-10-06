@@ -2,8 +2,8 @@
 
 **SAM Download Manager** is a Windows download manager developed by **Ritech RFCR**. It provides a simple download queue, browser and clipboard integration, configurable download behavior, automatic post-download actions, and built-in archive extraction without requiring an external archive application.
 
-**Current Version:** 1.0.3  
-**Release Date:** October 4, 2026  
+**Current Version:** 1.0.4  
+**Release Date:** October 5, 2026  
 **Developer:** Ritech RFCR
 
 ---
@@ -26,6 +26,10 @@
 - Automatic Shutdown, Sleep, and Hibernate actions.
 - Built-in archive extraction.
 - Duplicate download protection.
+- File Virus Check for downloaded files.
+- Automatic update checking through GitHub Releases.
+- Manual update checking from the About window.
+- Guided update installation using `SAMSetup.exe`.
 - Custom dark SAM Download Manager interface.
 
 ---
@@ -153,7 +157,64 @@ Where a reliable expected file size is available, SDM can use the file size as a
 
 ---
 
+## File Virus Check
+
+SAM Download Manager includes a File Virus Check feature for downloaded files.
+
+This feature provides an additional security check for downloaded content before the user opens or uses the file.
+
+The virus-checking workflow is integrated into SAM Download Manager so users can review downloaded files directly from the application.
+
+---
+
+## Automatic Updates
+
+SAM Download Manager includes a built-in update notification and installer-launch system.
+
+Update behavior includes:
+
+- Automatic update checking when SAM Download Manager starts.
+- Manual **CHECK FOR UPDATES** option from the About window.
+- Version comparison using the latest published GitHub Release tag.
+- Update notification showing the installed version and the latest available version.
+- Release Notes displayed directly in the update window.
+- Download size information for the new installer.
+- **UPDATE NOW** and **LATER** options.
+- Download progress display while retrieving the installer.
+- The official update asset is expected to be named `SAMSetup.exe`.
+- When **UPDATE NOW** is selected, SAM downloads `SAMSetup.exe`, closes safely, and launches the installer.
+- Installation is completed through the normal SAM Setup interface, allowing the user to follow the installer instructions.
+
+SAM Download Manager does not silently replace application files. The user remains in control of whether and when the new version is installed.
+
+---
+
 # Release History
+
+## Version 1.0.4
+
+**Release Date: October 5, 2026**
+
+### What's New
+
+- Added **File Virus Check** support for downloaded files.
+- Added automatic update checking when SAM Download Manager starts.
+- Added manual **CHECK FOR UPDATES** support from the About window.
+- Added GitHub Release version detection using published release tags.
+- Added a dedicated update notification window.
+- Added installed-version and latest-version information to the update window.
+- Added GitHub Release Notes display for available updates.
+- Added installer download size information.
+- Added **UPDATE NOW** and **LATER** update options.
+- Added update download progress and percentage display.
+- Added automatic download of the published `SAMSetup.exe` installer.
+- Added safe SAM shutdown before launching the installer.
+- Added `SAM.Updater` handoff to wait for SAM to close before starting `SAMSetup.exe`.
+- Improved application version synchronization across the Splash Screen, main interface, and About window.
+- Improved clipboard detection so copied source code, multi-line text, and text containing embedded URLs are ignored instead of being treated as downloads.
+- Various stability and update-system improvements.
+
+---
 
 ## Version 1.0.3
 
@@ -279,6 +340,6 @@ Resume and multi-connection behavior can also depend on whether the remote serve
 ## About
 
 **SAM Download Manager**  
-**Version 1.0.3**  
-**October 4, 2026**  
+**Version 1.0.4**  
+**October 5, 2026**  
 **Ritech RFCR**
